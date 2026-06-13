@@ -6,6 +6,7 @@
   <title>ABTConsulting (PTY) Ltd | Business Management Consultancy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -461,9 +462,9 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-content">
-    <div class="hero-tag">Cape Town, South Africa</div>
-    <h1>Your Business,<br /><em>Elevated</em></h1>
-    <p>ABTConsulting partners with businesses to deliver strategic consulting, digital transformation, and financial clarity tailored to the African market.</p>
+    <div class="hero-tag" id="hero-tag">Cape Town, South Africa</div>
+    <h1><span id="hero-headline">Your Business,</span><br /><em id="hero-headline-accent">Elevated</em></h1>
+    <p id="hero-subtext">ABTConsulting partners with businesses to deliver strategic consulting, digital transformation, and financial clarity tailored to the African market.</p>
     <a href="#contact" class="btn-primary">Get In Touch</a>
     <a href="#services" class="btn-outline">Our Services</a>
   </div>
@@ -482,8 +483,8 @@
       <div class="about-text reveal">
         <p class="section-label">About Us</p>
         <h2 class="section-title">Built on Trust.<br />Driven by Results.</h2>
-        <p>ABTConsulting (PTY) Ltd is a Johannesburg-registered, Cape Town-based business management consultancy. We help small and medium enterprises navigate complexity: from cloud adoption and data strategy to marketing, public relations, and compliance.</p>
-        <p>Our team combines deep local knowledge with international best practices to deliver solutions that are practical, scalable, and aligned with your goals. We don't do one-size-fits-all. Every engagement is tailored to your unique business context.</p>
+        <p id="about-body1">ABTConsulting (PTY) Ltd is a Johannesburg-registered, Cape Town-based business management consultancy. We help small and medium enterprises navigate complexity: from cloud adoption and data strategy to marketing, public relations, and compliance.</p>
+        <p id="about-body2">Our team combines deep local knowledge with international best practices to deliver solutions that are practical, scalable, and aligned with your goals. We don't do one-size-fits-all. Every engagement is tailored to your unique business context.</p>
         <div class="about-stats">
           <div class="stat"><strong>5+</strong><span>Services offered</span></div>
           <div class="stat"><strong>100%</strong><span>Client focus</span></div>
@@ -506,40 +507,40 @@
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-4.584-7H7a4 4 0 00-4 3z"/></svg>
         </div>
-        <h3>Cloud Solutions</h3>
-        <p>Migrate, manage, and optimise your infrastructure in the cloud. Reduce costs and increase agility with modern cloud architecture designed for your business size.</p>
+        <h3 id="service-0-title">Cloud Solutions</h3>
+        <p id="service-0-desc">Migrate, manage, and optimise your infrastructure in the cloud. Reduce costs and increase agility with modern cloud architecture designed for your business size.</p>
       </div>
 
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
         </div>
-        <h3>Data Management</h3>
-        <p>Turn raw data into strategic insight. We design data pipelines, reporting frameworks, and analytics dashboards that support informed decision-making.</p>
+        <h3 id="service-1-title">Data Management</h3>
+        <p id="service-1-desc">Turn raw data into strategic insight. We design data pipelines, reporting frameworks, and analytics dashboards that support informed decision-making.</p>
       </div>
 
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
-        <h3>Digital Marketing</h3>
-        <p>Grow your online presence through targeted campaigns, SEO strategy, content marketing, and social media management crafted for the South African market.</p>
+        <h3 id="service-2-title">Digital Marketing</h3>
+        <p id="service-2-desc">Grow your online presence through targeted campaigns, SEO strategy, content marketing, and social media management crafted for the South African market.</p>
       </div>
 
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         </div>
-        <h3>Public Relations</h3>
-        <p>Build and protect your brand's reputation. From media relations and press releases to crisis communication and stakeholder engagement, we tell your story.</p>
+        <h3 id="service-3-title">Public Relations</h3>
+        <p id="service-3-desc">Build and protect your brand's reputation. From media relations and press releases to crisis communication and stakeholder engagement, we tell your story.</p>
       </div>
 
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
         </div>
-        <h3>Tax &amp; Accounting</h3>
-        <p>Stay compliant and financially healthy. We handle SARS submissions, bookkeeping, payroll processing, and year-round financial advisory support.</p>
+        <h3 id="service-4-title">Tax &amp; Accounting</h3>
+        <p id="service-4-desc">Stay compliant and financially healthy. We handle SARS submissions, bookkeeping, payroll processing, and year-round financial advisory support.</p>
       </div>
 
     </div>
@@ -554,24 +555,24 @@
     <p class="section-sub reveal" style="color:rgba(255,255,255,0.6);max-width:520px">We combine strategic thinking with genuine care for your business outcomes. Here's what sets us apart.</p>
     <div class="why-grid">
       <div class="why-card reveal">
-        <div class="why-number">01</div>
-        <h3>Experienced Team</h3>
-        <p>Our consultants bring multi-industry experience across finance, technology, and marketing, so you get well-rounded guidance rather than siloed advice.</p>
+        <div class="why-number" id="why-0-number">01</div>
+        <h3 id="why-0-title">Experienced Team</h3>
+        <p id="why-0-desc">Our consultants bring multi-industry experience across finance, technology, and marketing, so you get well-rounded guidance rather than siloed advice.</p>
       </div>
       <div class="why-card reveal">
-        <div class="why-number">02</div>
-        <h3>Personalised Service</h3>
-        <p>No templated solutions. Every engagement starts with listening. We understand your business before we recommend a single action.</p>
+        <div class="why-number" id="why-1-number">02</div>
+        <h3 id="why-1-title">Personalised Service</h3>
+        <p id="why-1-desc">No templated solutions. Every engagement starts with listening. We understand your business before we recommend a single action.</p>
       </div>
       <div class="why-card reveal">
-        <div class="why-number">03</div>
-        <h3>Local Expertise</h3>
-        <p>Cape Town-based and South Africa-focused. We understand the regulatory landscape, economic pressures, and growth opportunities unique to this market.</p>
+        <div class="why-number" id="why-2-number">03</div>
+        <h3 id="why-2-title">Local Expertise</h3>
+        <p id="why-2-desc">Cape Town-based and South Africa-focused. We understand the regulatory landscape, economic pressures, and growth opportunities unique to this market.</p>
       </div>
       <div class="why-card reveal">
-        <div class="why-number">04</div>
-        <h3>End-to-End Support</h3>
-        <p>From strategy to implementation and ongoing optimisation, we stay with you beyond the kickoff meeting and ensure real, measurable impact.</p>
+        <div class="why-number" id="why-3-number">04</div>
+        <h3 id="why-3-title">End-to-End Support</h3>
+        <p id="why-3-desc">From strategy to implementation and ongoing optimisation, we stay with you beyond the kickoff meeting and ensure real, measurable impact.</p>
       </div>
     </div>
   </div>
@@ -592,7 +593,7 @@
           </div>
           <div class="ci-text">
             <strong>Phone</strong>
-            <span>071 126 3340</span>
+            <span id="contact-phone">071 126 3340</span>
           </div>
         </div>
         <div class="contact-item">
@@ -601,7 +602,7 @@
           </div>
           <div class="ci-text">
             <strong>Address</strong>
-            <span>Barbestyn St, Ottery<br />Cape Town, 7808</span>
+            <span id="contact-address">Barbestyn St, Ottery<br />Cape Town, 7808</span>
           </div>
         </div>
         <div class="contact-item">
@@ -610,7 +611,7 @@
           </div>
           <div class="ci-text">
             <strong>Operating Hours</strong>
-            <span>Mon to Fri: 08:00 to 17:00<br />Sat and Sun: Closed</span>
+            <span id="contact-hours">Mon to Fri: 08:00 to 17:00<br />Sat and Sun: Closed</span>
           </div>
         </div>
         <div class="map-wrap">
@@ -705,6 +706,68 @@
     });
   }, { threshold: 0.12 });
   revealEls.forEach(el => observer.observe(el));
+
+  // Netlify Identity — redirect to /admin after login and handle invite tokens
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', user => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+
+  // CMS content loader — fetches _data JSON files and populates editable elements
+  async function loadContent() {
+    try {
+      const [hero, about, services, why, contact] = await Promise.all([
+        fetch('_data/hero.json').then(r => r.json()),
+        fetch('_data/about.json').then(r => r.json()),
+        fetch('_data/services.json').then(r => r.json()),
+        fetch('_data/why.json').then(r => r.json()),
+        fetch('_data/contact.json').then(r => r.json())
+      ]);
+
+      // Hero
+      set('hero-tag', hero.tag);
+      set('hero-headline', hero.headline);
+      set('hero-headline-accent', hero.headline_accent);
+      set('hero-subtext', hero.subtext);
+
+      // About
+      set('about-body1', about.body1);
+      set('about-body2', about.body2);
+
+      // Services
+      services.items.forEach((s, i) => {
+        set(`service-${i}-title`, s.title);
+        set(`service-${i}-desc`, s.description);
+      });
+
+      // Why
+      why.items.forEach((w, i) => {
+        set(`why-${i}-number`, w.number);
+        set(`why-${i}-title`, w.title);
+        set(`why-${i}-desc`, w.description);
+      });
+
+      // Contact
+      set('contact-phone', contact.phone);
+      document.getElementById('contact-address').innerHTML = contact.address1 + '<br />' + contact.address2;
+      document.getElementById('contact-hours').innerHTML = contact.hours_weekday + '<br />' + contact.hours_weekend;
+
+    } catch (e) {
+      // Falls back silently to hardcoded HTML content if fetch fails
+    }
+  }
+
+  function set(id, text) {
+    const el = document.getElementById(id);
+    if (el && text) el.textContent = text;
+  }
+
+  loadContent();
 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
