@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "number": "01",
+      "title": "Experienced Team",
+      "description": "Our consultants bring multi-industry experience across finance, technology, and marketing, so you get well-rounded guidance rather than siloed advice."
+    },
+    {
+      "number": "02",
+      "title": "Personalised Service",
+      "description": "No templated solutions. Every engagement starts with listening. We understand your business before we recommend a single action."
+    },
+    {
+      "number": "03",
+      "title": "Local Expertise",
+      "description": "Cape Town-based and South Africa-focused. We understand the regulatory landscape, economic pressures, and growth opportunities unique to this market."
+    },
+    {
+      "number": "04",
+      "title": "End-to-End Support",
+      "description": "From strategy to implementation and ongoing optimisation, we stay with you beyond the kickoff meeting and ensure real, measurable impact."
+    }
+  ]
+}
