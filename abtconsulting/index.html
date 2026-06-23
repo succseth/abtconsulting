@@ -54,7 +54,6 @@
       height: 64px;
       width: auto;
       display: block;
-      mix-blend-mode: multiply;
     }
     .nav-links {
       display: flex;
@@ -446,7 +445,7 @@
 <nav id="navbar">
   <div class="nav-logo">
     <a href="#hero" aria-label="ABTConsulting home">
-      <img src="abt_logo_updated.png" alt="ABTConsulting" />
+      <img src="abt_logo_updated.png" alt="ABTConsulting" id="nav-logo-img" crossorigin="anonymous" />
     </a>
   </div>
   <ul class="nav-links" id="navLinks">
@@ -707,6 +706,33 @@
     });
   }, { threshold: 0.12 });
   revealEls.forEach(el => observer.observe(el));
+
+  // Strip white background from logo by making near-white pixels transparent via canvas
+  function removeWhiteBg(img) {
+    const canvas = document.createElement('canvas');
+    canvas.width  = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const d = imageData.data;
+    for (let i = 0; i < d.length; i += 4) {
+      // Make any pixel that is close to white fully transparent
+      if (d[i] > 215 && d[i+1] > 215 && d[i+2] > 215) {
+        d[i+3] = 0;
+      }
+    }
+    ctx.putImageData(imageData, 0, 0);
+    img.src = canvas.toDataURL('image/png');
+  }
+  const logoImg = document.getElementById('nav-logo-img');
+  if (logoImg) {
+    if (logoImg.complete && logoImg.naturalWidth) {
+      removeWhiteBg(logoImg);
+    } else {
+      logoImg.addEventListener('load', () => removeWhiteBg(logoImg));
+    }
+  }
 
   // Netlify Identity — redirect to /admin after login and handle invite tokens
   if (window.netlifyIdentity) {
