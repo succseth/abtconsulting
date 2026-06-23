@@ -41,17 +41,21 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 clamp(20px, 5vw, 60px);
-      height: 70px;
-      background: transparent;
-      transition: background 0.3s, box-shadow 0.3s;
+      height: 76px;
+      background: rgba(5, 12, 30, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+      transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
     }
     nav.scrolled {
       background: var(--navy);
-      box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+      border-bottom-color: rgba(201,168,76,0.4);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.5);
     }
     .nav-logo a { display: block; line-height: 0; }
     .nav-logo img {
-      height: 64px;
+      height: 56px;
       width: auto;
       display: block;
     }
