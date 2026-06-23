@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images"
+media_folder: "abtconsulting/images"
 public_folder: "/images"
 
 collections:
@@ -12,7 +12,7 @@ collections:
 
       - name: "hero"
         label: "Hero Section"
-        file: "_data/hero.json"
+        file: "abtconsulting/_data/hero.json"
         fields:
           - { label: "Location Tag", name: "tag", widget: "string" }
           - { label: "Headline", name: "headline", widget: "string" }
@@ -21,14 +21,14 @@ collections:
 
       - name: "about"
         label: "About Section"
-        file: "_data/about.json"
+        file: "abtconsulting/_data/about.json"
         fields:
           - { label: "Paragraph 1", name: "body1", widget: "text" }
           - { label: "Paragraph 2", name: "body2", widget: "text" }
 
       - name: "services"
         label: "Services"
-        file: "_data/services.json"
+        file: "abtconsulting/_data/services.json"
         fields:
           - label: "Services List"
             name: "items"
@@ -39,7 +39,7 @@ collections:
 
       - name: "why"
         label: "Why Choose Us"
-        file: "_data/why.json"
+        file: "abtconsulting/_data/why.json"
         fields:
           - label: "Reasons"
             name: "items"
@@ -51,7 +51,7 @@ collections:
 
       - name: "contact"
         label: "Contact Details"
-        file: "_data/contact.json"
+        file: "abtconsulting/_data/contact.json"
         fields:
           - { label: "Phone", name: "phone", widget: "string" }
           - { label: "Address Line 1", name: "address1", widget: "string" }
