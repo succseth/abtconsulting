@@ -42,15 +42,11 @@
       justify-content: space-between;
       padding: 0 clamp(20px, 5vw, 60px);
       height: 76px;
-      background: rgba(5, 12, 30, 0.72);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(201,168,76,0.25);
-      transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+      background: transparent;
+      transition: background 0.3s, box-shadow 0.3s;
     }
     nav.scrolled {
       background: var(--navy);
-      border-bottom-color: rgba(201,168,76,0.4);
       box-shadow: 0 2px 24px rgba(0,0,0,0.5);
     }
     .nav-logo a { display: block; line-height: 0; }
@@ -104,7 +100,8 @@
     /* ── HERO ── */
     #hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 60%, #0a1628 100%);
+      background: linear-gradient(135deg, rgba(13,27,62,0.88) 0%, rgba(13,27,62,0.65) 60%, rgba(13,27,62,0.45) 100%),
+                  url('hero_img.png') center / cover no-repeat;
       display: flex;
       align-items: center;
       padding: 100px clamp(20px, 5vw, 60px) 60px;
