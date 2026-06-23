@@ -2,23 +2,23 @@
   "items": [
     {
       "number": "01",
-      "title": "Experienced Team",
-      "description": "Our consultants bring multi-industry experience across finance, technology, and marketing, so you get well-rounded guidance rather than siloed advice."
+      "title": "Real Operational Experience",
+      "description": "I don't work from theory. My recommendations are shaped by more than 15 years of experience across financial services, business operations, process improvement, and document automation. I've worked inside complex operational environments and understand what it takes to make change stick."
     },
     {
       "number": "02",
-      "title": "Personalised Service",
-      "description": "No templated solutions. Every engagement starts with listening. We understand your business before we recommend a single action."
+      "title": "Practical, Not Academic",
+      "description": "I don't deliver reports that gather dust. Every engagement is focused on creating practical processes, systems, and documentation that can be implemented, adopted, and used by your team."
     },
     {
       "number": "03",
-      "title": "Local Expertise",
-      "description": "Cape Town-based and South Africa-focused. We understand the regulatory landscape, economic pressures, and growth opportunities unique to this market."
+      "title": "Built for Growing Businesses",
+      "description": "I specialise in businesses that have outgrown the way they operate. Whether you're struggling with inconsistency, undocumented processes, or operational bottlenecks, I help you build the structure needed to scale with confidence."
     },
     {
       "number": "04",
-      "title": "End-to-End Support",
-      "description": "From strategy to implementation and ongoing optimisation, we stay with you beyond the kickoff meeting and ensure real, measurable impact."
+      "title": "Strategy Meets Implementation",
+      "description": "Many consultants identify problems. Few help implement solutions. I combine business analysis, process improvement, documentation, and implementation support to ensure improvements deliver measurable results."
     }
   ]
 }
