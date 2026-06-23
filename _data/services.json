@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "title": "Cloud Solutions",
+      "description": "Migrate, manage, and optimise your infrastructure in the cloud. Reduce costs and increase agility with modern cloud architecture designed for your business size."
+    },
+    {
+      "title": "Data Management",
+      "description": "Turn raw data into strategic insight. We design data pipelines, reporting frameworks, and analytics dashboards that support informed decision-making."
+    },
+    {
+      "title": "Digital Marketing",
+      "description": "Grow your online presence through targeted campaigns, SEO strategy, content marketing, and social media management crafted for the South African market."
+    },
+    {
+      "title": "Public Relations",
+      "description": "Build and protect your brand's reputation. From media relations and press releases to crisis communication and stakeholder engagement, we tell your story."
+    },
+    {
+      "title": "Tax & Accounting",
+      "description": "Stay compliant and financially healthy. We handle SARS submissions, bookkeeping, payroll processing, and year-round financial advisory support."
+    }
+  ]
+}
