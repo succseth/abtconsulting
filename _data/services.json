@@ -1,24 +1,20 @@
 {
   "items": [
     {
-      "title": "Cloud Solutions",
-      "description": "Migrate, manage, and optimise your infrastructure in the cloud. Reduce costs and increase agility with modern cloud architecture designed for your business size."
+      "title": "Operational Process Design",
+      "description": "When growth outpaces structure, inefficiencies begin to multiply. We map your current operations, identify where time and quality are being lost, and redesign workflows that support consistent, scalable performance."
     },
     {
-      "title": "Data Management",
-      "description": "Turn raw data into strategic insight. We design data pipelines, reporting frameworks, and analytics dashboards that support informed decision-making."
+      "title": "Documentation & SOP Development",
+      "description": "When knowledge lives in people's heads, businesses become dependent on individuals. We create practical SOPs, process guides, checklists, and operational standards that improve consistency and reduce risk."
     },
     {
-      "title": "Digital Marketing",
-      "description": "Grow your online presence through targeted campaigns, SEO strategy, content marketing, and social media management crafted for the South African market."
+      "title": "Document Automation & Template Systems",
+      "description": "Manual document creation is time-consuming, inconsistent, and prone to error. We design logic-based templates and automation solutions that improve efficiency and ensure consistent output."
     },
     {
-      "title": "Public Relations",
-      "description": "Build and protect your brand's reputation. From media relations and press releases to crisis communication and stakeholder engagement, we tell your story."
-    },
-    {
-      "title": "Tax & Accounting",
-      "description": "Stay compliant and financially healthy. We handle SARS submissions, bookkeeping, payroll processing, and year-round financial advisory support."
+      "title": "Operational AI & Automation Readiness",
+      "description": "Technology delivers value only when the underlying process is sound. We assess where AI and automation can create genuine operational improvements and prepare your business for successful implementation."
     }
   ]
 }
