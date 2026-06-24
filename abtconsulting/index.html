@@ -107,7 +107,7 @@
     #hero {
       min-height: 100vh;
       background: linear-gradient(180deg, rgba(13,27,62,0.55) 0%, rgba(13,27,62,0.45) 50%, rgba(13,27,62,0.65) 100%),
-                  url('hero_updated.jpeg') center / cover no-repeat;
+                  url('hero_img.png') center / cover no-repeat;
       background-attachment: scroll;
       display: flex;
       align-items: center;
@@ -118,7 +118,7 @@
     @media (max-width: 768px) {
       #hero {
         background: linear-gradient(180deg, rgba(13,27,62,0.45) 0%, rgba(13,27,62,0.35) 50%, rgba(13,27,62,0.55) 100%),
-                    url('hero_updated.jpeg') center / cover no-repeat;
+                    url('hero_img.png') center / cover no-repeat;
         min-height: 100svh;
       }
     }
@@ -312,7 +312,8 @@
       align-items: center;
     }
     .about-img {
-      background: var(--navy);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,168,76,0.25);
       border-radius: 8px;
       aspect-ratio: 4/3;
       display: flex;
@@ -407,7 +408,7 @@
 
     /* ── CONTACT ── */
     #contact { background: var(--light-grey); }
-    .contact-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; }
+    .contact-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 32px; }
     .contact-details {
       display: flex;
       flex-wrap: wrap;
