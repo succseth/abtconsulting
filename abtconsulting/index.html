@@ -51,15 +51,15 @@
     }
     .nav-logo a { display: block; line-height: 0; }
     .nav-logo img {
-      height: 40px;
-      width: auto;
+      height: 56px;
+      width: 300px;
+      object-fit: contain;
       display: block;
-      max-width: 200px;
     }
     @media (max-width: 768px) {
       .nav-logo img {
-        height: 32px;
-        max-width: 160px;
+        height: 38px;
+        width: 190px;
       }
     }
     .nav-links {
@@ -107,7 +107,7 @@
     #hero {
       min-height: 100vh;
       background: linear-gradient(180deg, rgba(13,27,62,0.55) 0%, rgba(13,27,62,0.45) 50%, rgba(13,27,62,0.65) 100%),
-                  url('her_img.jpeg') center / cover no-repeat;
+                  url('hero_updated.jpeg') center / cover no-repeat;
       background-attachment: scroll;
       display: flex;
       align-items: center;
@@ -118,12 +118,10 @@
     @media (max-width: 768px) {
       #hero {
         background: linear-gradient(180deg, rgba(13,27,62,0.45) 0%, rgba(13,27,62,0.35) 50%, rgba(13,27,62,0.55) 100%),
-                    url('her_img.jpeg') center / cover no-repeat;
+                    url('hero_updated.jpeg') center / cover no-repeat;
         min-height: 100svh;
       }
     }
-    /* cross pattern removed */
-    /* Subtle burnt-orange glow bottom-right */
     #hero::after {
       content: '';
       position: absolute;
@@ -148,9 +146,9 @@
     }
     .hero-content h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-size: clamp(1.7rem, 4vw, 2.8rem);
       color: var(--white);
-      line-height: 1.15;
+      line-height: 1.25;
       margin-bottom: 20px;
     }
     .hero-content h1 em {
@@ -235,55 +233,68 @@
     }
     .container { max-width: 1100px; margin: 0 auto; }
 
-    /* ── PAIN POINTS ── */
+    /* ── BEFORE & AFTER ── */
     #pain {
       background: var(--navy);
       padding: var(--section-pad) clamp(20px, 5vw, 60px);
     }
-    .pain-layout {
+    .ba-header {
+      max-width: 1100px;
+      margin: 0 auto 48px;
+    }
+    .ba-header .section-title { color: var(--white); margin-bottom: 0; }
+    .ba-grid {
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
+      gap: 40px;
     }
-    .pain-left .section-title { margin-bottom: 20px; color: var(--white); }
-    .pain-close {
+    .ba-col {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 10px;
+      padding: 36px 32px;
+    }
+    .ba-col-heading {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--gold);
-      font-style: italic;
-      line-height: 1.5;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      margin-bottom: 24px;
+      line-height: 1.2;
     }
-    .pain-list {
+    .ba-before .ba-col-heading { color: rgba(255,255,255,0.6); }
+    .ba-after .ba-col-heading { color: var(--gold); }
+    .ba-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
     }
-    .pain-list li {
+    .ba-list li {
       display: flex;
       align-items: flex-start;
-      gap: 16px;
+      gap: 14px;
       font-size: 0.97rem;
       color: rgba(255,255,255,0.75);
-      line-height: 1.6;
+      line-height: 1.5;
     }
-    .pain-list li::before {
+    .ba-list li::before {
       content: '';
       flex-shrink: 0;
       width: 3px;
-      height: 100%;
-      min-height: 1.6em;
-      background: var(--gold);
+      min-height: 1.5em;
       border-radius: 2px;
       margin-top: 2px;
     }
+    .ba-before li::before { background: rgba(255,255,255,0.25); }
+    .ba-after li::before { background: var(--gold); }
     @media (max-width: 768px) {
-      .pain-layout {
+      .ba-grid {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 24px;
+      }
+      .ba-col {
+        padding: 28px 24px;
       }
     }
 
@@ -415,14 +426,6 @@
     .contact-item .ci-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
     .contact-item .ci-text strong { display: block; font-size: 0.8rem; color: var(--body-dark); font-weight: 500; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
     .contact-item .ci-text span { font-size: 0.95rem; color: var(--navy); }
-    .map-wrap {
-      margin-top: 24px;
-      border-radius: 8px;
-      overflow: hidden;
-      height: 200px;
-      border: 1px solid var(--light-grey);
-    }
-    .map-wrap iframe { width: 100%; height: 100%; border: 0; }
 
     .contact-form { background: var(--white); border-radius: 8px; padding: 36px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
     .form-group { margin-bottom: 18px; }
@@ -526,12 +529,42 @@
 <section id="hero">
   <div class="hero-content">
     <div class="hero-tag" id="hero-tag">Cape Town, South Africa</div>
-    <h1><span id="hero-headline">Your Business,</span><br /><em id="hero-headline-accent">Elevated</em></h1>
+    <h1 id="hero-headline">Your business is growing<br />Your processes should too</h1>
     <p id="hero-subtext">ABTConsulting partners with businesses to deliver strategic consulting, digital transformation, and financial clarity tailored to the African market.</p>
     <a href="#contact" class="btn-primary">Get In Touch</a>
     <a href="#services" class="btn-outline">Our Services</a>
   </div>
   <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section id="pain">
+  <div class="ba-header reveal">
+    <p class="section-label">Before &amp; After</p>
+    <h2 class="section-title">Before &amp; After Working with ABTConsulting</h2>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-col ba-before reveal">
+      <h3 class="ba-col-heading">Before</h3>
+      <ul class="ba-list">
+        <li>Owner dependent</li>
+        <li>Rework and confusion</li>
+        <li>Inconsistent delivery</li>
+        <li>Knowledge lives in people's heads</li>
+        <li>Constant firefighting</li>
+      </ul>
+    </div>
+    <div class="ba-col ba-after reveal">
+      <h3 class="ba-col-heading">After</h3>
+      <ul class="ba-list">
+        <li>Team enabled</li>
+        <li>Clear accountability</li>
+        <li>Consistent delivery</li>
+        <li>Documented processes</li>
+        <li>Predictable operations</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
@@ -558,30 +591,12 @@
   </div>
 </section>
 
-<!-- PAIN POINTS -->
-<section id="pain">
-  <div class="pain-layout">
-    <div class="pain-left reveal">
-      <p class="section-label">Sound Familiar?</p>
-      <h2 class="section-title">Is this your business right now?</h2>
-      <p class="pain-close">If so, your business has outgrown its processes. That's exactly where I can help.</p>
-    </div>
-    <ul class="pain-list">
-      <li class="reveal">The business depends on you for everything.</li>
-      <li class="reveal">Processes exist, but nobody follows them consistently.</li>
-      <li class="reveal">New staff learn by asking questions instead of following a system.</li>
-      <li class="reveal">Work gets redone because expectations aren't clear.</li>
-      <li class="reveal">Growth is creating complexity instead of freedom.</li>
-    </ul>
-  </div>
-</section>
-
 <!-- SERVICES -->
 <section id="services">
   <div class="container">
     <p class="section-label reveal">What We Do</p>
     <h2 class="section-title reveal">Our Services</h2>
-    <p class="section-sub reveal">Comprehensive business solutions designed to grow, protect, and modernise your organisation.</p>
+    <p class="section-sub reveal">Practical solutions that improve efficiency, reduce operational friction, and help your business scale with confidence.</p>
     <div class="services-grid">
 
       <div class="service-card reveal">
@@ -625,7 +640,7 @@
   <div class="container">
     <p class="section-label reveal">Why ABTConsulting</p>
     <h2 class="section-title reveal">The ABT Advantage</h2>
-    <p class="section-sub reveal" style="color:rgba(255,255,255,0.6);max-width:520px">We combine strategic thinking with genuine care for your business outcomes. Here's what sets us apart.</p>
+    <p class="section-sub reveal" style="color:rgba(255,255,255,0.6);max-width:520px">Practical expertise. Proven operational experience. Solutions that work in the real world.</p>
     <div class="why-grid">
       <div class="why-card reveal">
         <div class="why-number" id="why-0-number">01</div>
@@ -675,7 +690,7 @@
           </div>
           <div class="ci-text">
             <strong>Address</strong>
-            <span id="contact-address">Barbestyn St, Ottery<br />Cape Town, 7808</span>
+            <span id="contact-address">Cape Town, South Africa</span>
           </div>
         </div>
         <div class="contact-item">
@@ -683,18 +698,9 @@
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <div class="ci-text">
-            <strong>Operating Hours</strong>
-            <span id="contact-hours">Mon to Fri: 08:00 to 17:00<br />Sat and Sun: Closed</span>
+            <strong>Availability</strong>
+            <span id="contact-hours">Discovery calls by appointment</span>
           </div>
-        </div>
-        <div class="map-wrap">
-          <iframe
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.5!2d18.5!3d-34.01!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5c6b0e1e0001%3A0x0!2sBarbestyn+St%2C+Ottery%2C+Cape+Town%2C+7808!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
-            title="ABTConsulting location">
-          </iframe>
         </div>
       </div>
 
@@ -722,11 +728,10 @@
             <label for="service">Service of Interest</label>
             <select id="service" name="service">
               <option value="">Select a service</option>
-              <option>Cloud Solutions</option>
-              <option>Data Management</option>
-              <option>Digital Marketing</option>
-              <option>Public Relations</option>
-              <option>Tax &amp; Accounting</option>
+              <option>Operational Process Design</option>
+              <option>Documentation &amp; SOP Development</option>
+              <option>Document Automation &amp; Template Systems</option>
+              <option>Operational AI &amp; Automation Readiness</option>
               <option>General Enquiry</option>
             </select>
           </div>
@@ -746,7 +751,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>&copy; 2025 <strong>ABTConsulting (PTY) Ltd</strong> &nbsp;|&nbsp; Barbestyn St, Ottery, Cape Town, 7808 &nbsp;|&nbsp; 071 126 3340</p>
+  <p>&copy; 2025 <strong>ABTConsulting (PTY) Ltd</strong> &nbsp;|&nbsp; Cape Town, South Africa &nbsp;|&nbsp; 071 126 3340</p>
   <p style="margin-top:6px;font-size:0.75rem;">Registered in South Africa</p>
 </footer>
 
@@ -790,7 +795,6 @@
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const d = imageData.data;
     for (let i = 0; i < d.length; i += 4) {
-      // Make any pixel that is close to white fully transparent
       if (d[i] > 215 && d[i+1] > 215 && d[i+2] > 215) {
         d[i+3] = 0;
       }
@@ -832,7 +836,6 @@
       // Hero
       set('hero-tag', hero.tag);
       set('hero-headline', hero.headline);
-      set('hero-headline-accent', hero.headline_accent);
       set('hero-subtext', hero.subtext);
 
       // About
@@ -854,8 +857,8 @@
 
       // Contact
       set('contact-phone', contact.phone);
-      document.getElementById('contact-address').innerHTML = contact.address1 + '<br />' + contact.address2;
-      document.getElementById('contact-hours').innerHTML = contact.hours_weekday + '<br />' + contact.hours_weekend;
+      set('contact-address', contact.address1);
+      set('contact-hours', contact.hours_weekday);
 
     } catch (e) {
       // Falls back silently to hardcoded HTML content if fetch fails
