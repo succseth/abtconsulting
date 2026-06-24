@@ -235,14 +235,14 @@
 
     /* ── BEFORE & AFTER ── */
     #pain {
-      background: var(--navy);
+      background: var(--light-grey);
       padding: var(--section-pad) clamp(20px, 5vw, 60px);
     }
     .ba-header {
       max-width: 1100px;
       margin: 0 auto 48px;
     }
-    .ba-header .section-title { color: var(--white); margin-bottom: 0; }
+    .ba-header .section-title { color: var(--navy); margin-bottom: 0; }
     .ba-grid {
       max-width: 1100px;
       margin: 0 auto;
@@ -251,10 +251,11 @@
       gap: 40px;
     }
     .ba-col {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(201,168,76,0.25);
+      background: var(--white);
+      border: 1px solid var(--light-grey);
       border-radius: 10px;
       padding: 36px 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
     .ba-col-heading {
       font-family: 'Playfair Display', serif;
@@ -262,8 +263,8 @@
       margin-bottom: 24px;
       line-height: 1.2;
     }
-    .ba-before .ba-col-heading { color: rgba(255,255,255,0.6); }
-    .ba-after .ba-col-heading { color: var(--gold); }
+    .ba-before .ba-col-heading { color: var(--body-dark); }
+    .ba-after .ba-col-heading { color: var(--navy); }
     .ba-list {
       list-style: none;
       display: flex;
@@ -275,7 +276,7 @@
       align-items: flex-start;
       gap: 14px;
       font-size: 0.97rem;
-      color: rgba(255,255,255,0.75);
+      color: var(--body-dark);
       line-height: 1.5;
     }
     .ba-list li::before {
@@ -286,7 +287,7 @@
       border-radius: 2px;
       margin-top: 2px;
     }
-    .ba-before li::before { background: rgba(255,255,255,0.25); }
+    .ba-before li::before { background: #cbd5e0; }
     .ba-after li::before { background: var(--gold); }
     @media (max-width: 768px) {
       .ba-grid {
@@ -299,7 +300,11 @@
     }
 
     /* ── ABOUT ── */
-    #about { background: var(--light-grey); }
+    #about { background: var(--navy); }
+    #about .section-title { color: var(--white); }
+    #about .section-label { color: var(--gold); }
+    #about .about-text p { color: rgba(255,255,255,0.75); }
+    #about .stat span { color: rgba(255,255,255,0.6); }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -402,17 +407,17 @@
 
     /* ── CONTACT ── */
     #contact { background: var(--light-grey); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-    }
     .contact-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; }
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
     .contact-item {
       display: flex;
       gap: 14px;
       align-items: flex-start;
-      margin-bottom: 20px;
     }
     .contact-item .ci-icon {
       width: 40px; height: 40px;
@@ -427,7 +432,44 @@
     .contact-item .ci-text strong { display: block; font-size: 0.8rem; color: var(--body-dark); font-weight: 500; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
     .contact-item .ci-text span { font-size: 0.95rem; color: var(--navy); }
 
-    .contact-form { background: var(--white); border-radius: 8px; padding: 36px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+    /* collapsible form */
+    .form-toggle-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--navy);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      transition: background 0.2s;
+      margin-bottom: 0;
+    }
+    .form-toggle-btn:hover { background: var(--gold); }
+    .form-toggle-btn .toggle-icon {
+      margin-left: auto;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .form-toggle-btn.open .toggle-icon { transform: rotate(180deg); }
+    .form-collapse {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .form-collapse.open { max-height: 1000px; }
+    .contact-form {
+      background: var(--white);
+      border-radius: 0 0 8px 8px;
+      padding: 36px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
     .form-group { margin-bottom: 18px; }
     .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; letter-spacing: 0.3px; }
     .form-group input,
@@ -529,7 +571,7 @@
 <section id="hero">
   <div class="hero-content">
     <div class="hero-tag" id="hero-tag">Cape Town, South Africa</div>
-    <h1 id="hero-headline">Your business is growing<br />Your processes should too</h1>
+    <h1 id="hero-headline">Your business is growing<br /><em>Your processes should too</em></h1>
     <p id="hero-subtext">ABTConsulting partners with businesses to deliver strategic consulting, digital transformation, and financial clarity tailored to the African market.</p>
     <a href="#contact" class="btn-primary">Get In Touch</a>
     <a href="#services" class="btn-outline">Our Services</a>
@@ -672,9 +714,9 @@
     <p class="section-label reveal">Let's Talk</p>
     <h2 class="section-title reveal">Get In Touch</h2>
     <p class="section-sub reveal">Ready to take your business to the next level? Reach out and we'd love to hear about your goals.</p>
-    <div class="contact-grid">
-      <div class="reveal">
-        <h3>Contact Information</h3>
+    <div class="reveal">
+      <h3>Contact Information</h3>
+      <div class="contact-details">
         <div class="contact-item">
           <div class="ci-icon">
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011 2.88 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -704,46 +746,52 @@
         </div>
       </div>
 
-      <div class="contact-form reveal">
-        <form id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">First Name *</label>
-              <input type="text" id="fname" name="fname" placeholder="Jane" required />
+      <button class="form-toggle-btn" id="formToggle" aria-expanded="false" aria-controls="formCollapse">
+        Send Us a Message
+        <svg class="toggle-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="form-collapse" id="formCollapse">
+        <div class="contact-form">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="fname" placeholder="Jane" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith" required />
+              </div>
             </div>
             <div class="form-group">
-              <label for="lname">Last Name *</label>
-              <input type="text" id="lname" name="lname" placeholder="Smith" required />
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.co.za" required />
             </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" placeholder="jane@company.co.za" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="0XX XXX XXXX" />
-          </div>
-          <div class="form-group">
-            <label for="service">Service of Interest</label>
-            <select id="service" name="service">
-              <option value="">Select a service</option>
-              <option>Operational Process Design</option>
-              <option>Documentation &amp; SOP Development</option>
-              <option>Document Automation &amp; Template Systems</option>
-              <option>Operational AI &amp; Automation Readiness</option>
-              <option>General Enquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" placeholder="Tell us about your business and how we can help..." required></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Send Message</button>
-          <div class="form-success" id="formSuccess">
-            Thank you! We'll be in touch within one business day.
-          </div>
-        </form>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="0XX XXX XXXX" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service of Interest</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option>Operational Process Design</option>
+                <option>Documentation &amp; SOP Development</option>
+                <option>Document Automation &amp; Template Systems</option>
+                <option>Operational AI &amp; Automation Readiness</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us about your business and how we can help..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+            <div class="form-success" id="formSuccess">
+              Thank you! We'll be in touch within one business day.
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -871,6 +919,14 @@
   }
 
   loadContent();
+
+  const formToggle = document.getElementById('formToggle');
+  const formCollapse = document.getElementById('formCollapse');
+  formToggle.addEventListener('click', () => {
+    const isOpen = formCollapse.classList.toggle('open');
+    formToggle.classList.toggle('open', isOpen);
+    formToggle.setAttribute('aria-expanded', isOpen);
+  });
 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
