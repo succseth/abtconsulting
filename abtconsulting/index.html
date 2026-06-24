@@ -885,7 +885,10 @@
 
       // Hero
       set('hero-tag', hero.tag);
-      set('hero-headline', hero.headline);
+      const h1 = document.getElementById('hero-headline');
+      if (h1 && hero.headline) {
+        h1.innerHTML = hero.headline + (hero.headline_accent ? '<br /><em>' + hero.headline_accent + '</em>' : '');
+      }
       set('hero-subtext', hero.subtext);
 
       // About
