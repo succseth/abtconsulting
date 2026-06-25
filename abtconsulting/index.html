@@ -305,11 +305,11 @@
     }
 
     /* ── ABOUT ── */
-    #about { background: var(--navy); }
-    #about .section-title { color: var(--white); }
+    #about { background: var(--white); }
+    #about .section-title { color: var(--navy); }
     #about .section-label { color: var(--gold); }
-    #about .about-text p { color: rgba(255,255,255,0.75); }
-    #about .stat span { color: rgba(255,255,255,0.6); }
+    #about .about-text p { color: var(--body-dark); }
+    #about .stat span { color: var(--body-dark); }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -317,8 +317,8 @@
       align-items: center;
     }
     .about-img {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(201,168,76,0.25);
+      background: #e8eaed;
+      border: 1px solid #d0d3d8;
       border-radius: 8px;
       aspect-ratio: 4/3;
       display: flex;
@@ -327,7 +327,7 @@
       overflow: hidden;
       position: relative;
     }
-    .about-img svg { width: 90%; height: 90%; }
+    .about-img svg { width: 100%; height: 100%; }
     .about-text p { color: var(--body-dark); margin-bottom: 16px; }
     .about-stats {
       display: flex;
@@ -343,7 +343,14 @@
     .stat span { font-size: 0.85rem; color: var(--body-dark); }
 
     /* ── SERVICES ── */
-    #services { background: var(--white); }
+    #services { background: var(--navy); }
+    #services .section-title { color: var(--white); }
+    #services .section-label { color: var(--gold); }
+    #services .section-sub { color: rgba(255,255,255,0.6); }
+    #services .service-card { background: rgba(255,255,255,0.04); border-color: rgba(201,168,76,0.2); }
+    #services .service-card h3 { color: var(--white); }
+    #services .service-card p { color: rgba(255,255,255,0.6); }
+    #services .service-card:hover { background: rgba(201,168,76,0.08); border-color: var(--gold); }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -376,9 +383,17 @@
     .service-card p { font-size: 0.88rem; color: var(--body-dark); line-height: 1.55; }
 
     /* ── WHY US ── */
-    #why { background: var(--navy); }
-    #why .section-title { color: var(--white); }
-    #why .section-sub { color: rgba(255,255,255,0.6); }
+    #why { background: var(--white); }
+    #why .section-title { color: var(--navy); }
+    #why .section-sub { color: var(--body-dark); }
+    #why .section-label { color: var(--gold); }
+    #why .why-card { border-color: var(--light-grey); background: var(--white); }
+    #why .why-card h3 { color: var(--navy); }
+    #why .why-card p { color: var(--body-dark); }
+    #why .why-card.why-after { background: rgba(201,168,76,0.06); border-color: var(--gold); }
+    #why .why-list li { color: var(--body-dark); }
+    #why .why-card .why-list li::before { background: #cbd5e0; }
+    #why .why-card.why-after .why-list li::before { background: var(--gold); }
     .why-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -408,7 +423,14 @@
     .why-card.why-after .why-list li::before { background: var(--gold); }
 
     /* ── CONTACT ── */
-    #contact { background: var(--light-grey); }
+    #contact { background: var(--navy); }
+    #contact .section-title { color: var(--white); }
+    #contact .section-label { color: var(--gold); }
+    #contact .section-sub { color: rgba(255,255,255,0.6); }
+    #contact .contact-info h3 { color: var(--white); }
+    #contact .ci-text strong { color: rgba(255,255,255,0.5); }
+    #contact .ci-text span { color: rgba(255,255,255,0.85); }
+    #contact .contact-form { background: rgba(255,255,255,0.05); box-shadow: none; border: 1px solid rgba(201,168,76,0.2); }
     .contact-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 32px; }
     .contact-details {
       display: flex;
@@ -587,48 +609,59 @@
     <div class="about-grid">
       <div class="about-img">
         <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" fill="none">
-          <!-- connector lines -->
-          <line x1="80" y1="60" x2="180" y2="60" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <line x1="220" y1="60" x2="320" y2="60" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <line x1="80" y1="150" x2="180" y2="150" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <line x1="220" y1="150" x2="320" y2="150" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <line x1="80" y1="240" x2="180" y2="240" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <line x1="220" y1="240" x2="320" y2="240" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <!-- vertical connectors -->
-          <line x1="200" y1="80" x2="200" y2="130" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
-          <line x1="200" y1="170" x2="200" y2="220" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
-          <line x1="50" y1="80" x2="50" y2="130" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
-          <line x1="50" y1="170" x2="50" y2="220" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
-          <line x1="350" y1="80" x2="350" y2="130" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
-          <line x1="350" y1="170" x2="350" y2="220" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
-          <!-- process nodes - middle column (prominent) -->
-          <rect x="172" y="40" width="56" height="40" rx="6" stroke="rgba(201,168,76,0.85)" stroke-width="1.8" fill="rgba(201,168,76,0.1)"/>
-          <rect x="172" y="130" width="56" height="40" rx="6" stroke="rgba(201,168,76,0.85)" stroke-width="1.8" fill="rgba(201,168,76,0.1)"/>
-          <rect x="172" y="220" width="56" height="40" rx="6" stroke="rgba(201,168,76,0.85)" stroke-width="1.8" fill="rgba(201,168,76,0.1)"/>
-          <!-- process nodes - left column -->
-          <rect x="22" y="40" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
-          <rect x="22" y="130" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
-          <rect x="22" y="220" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
-          <!-- process nodes - right column -->
-          <rect x="322" y="40" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
-          <rect x="322" y="130" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
-          <rect x="322" y="220" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
-          <!-- diamond decision nodes -->
-          <polygon points="200,105 212,118 200,131 188,118" stroke="rgba(201,168,76,0.6)" stroke-width="1.5" fill="rgba(201,168,76,0.08)"/>
-          <!-- dots on connectors -->
-          <circle cx="130" cy="60" r="3.5" fill="rgba(201,168,76,0.6)"/>
-          <circle cx="270" cy="60" r="3.5" fill="rgba(201,168,76,0.6)"/>
-          <circle cx="130" cy="150" r="3.5" fill="rgba(201,168,76,0.6)"/>
-          <circle cx="270" cy="150" r="3.5" fill="rgba(201,168,76,0.6)"/>
-          <circle cx="130" cy="240" r="3.5" fill="rgba(201,168,76,0.6)"/>
-          <circle cx="270" cy="240" r="3.5" fill="rgba(201,168,76,0.6)"/>
-          <!-- arrow heads -->
-          <polyline points="175,58 180,60 175,62" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
-          <polyline points="175,148 180,150 175,152" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
-          <polyline points="175,238 180,240 175,242" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
-          <polyline points="315,58 320,60 315,62" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
-          <polyline points="315,148 320,150 315,152" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
-          <polyline points="315,238 320,240 315,242" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
+          <!-- grey background -->
+          <rect width="400" height="300" fill="#e8eaed"/>
+          <!-- subtle grid -->
+          <line x1="0" y1="60" x2="400" y2="60" stroke="#c8cbd0" stroke-width="0.5"/>
+          <line x1="0" y1="120" x2="400" y2="120" stroke="#c8cbd0" stroke-width="0.5"/>
+          <line x1="0" y1="180" x2="400" y2="180" stroke="#c8cbd0" stroke-width="0.5"/>
+          <line x1="0" y1="240" x2="400" y2="240" stroke="#c8cbd0" stroke-width="0.5"/>
+          <line x1="80" y1="0" x2="80" y2="300" stroke="#c8cbd0" stroke-width="0.5"/>
+          <line x1="160" y1="0" x2="160" y2="300" stroke="#c8cbd0" stroke-width="0.5"/>
+          <line x1="240" y1="0" x2="240" y2="300" stroke="#c8cbd0" stroke-width="0.5"/>
+          <line x1="320" y1="0" x2="320" y2="300" stroke="#c8cbd0" stroke-width="0.5"/>
+          <!-- flow lines -->
+          <line x1="60" y1="60" x2="130" y2="60" stroke="#8a9bb0" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="190" y1="60" x2="250" y2="60" stroke="#8a9bb0" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="310" y1="60" x2="340" y2="60" stroke="#8a9bb0" stroke-width="1.5"/>
+          <line x1="160" y1="80" x2="160" y2="110" stroke="#8a9bb0" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="60" y1="150" x2="130" y2="150" stroke="#8a9bb0" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="190" y1="150" x2="250" y2="150" stroke="#8a9bb0" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="160" y1="170" x2="160" y2="200" stroke="#8a9bb0" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="60" y1="240" x2="130" y2="240" stroke="#8a9bb0" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="190" y1="240" x2="250" y2="240" stroke="#8a9bb0" stroke-width="1.5" marker-end="url(#arr)"/>
+          <!-- process boxes -->
+          <rect x="20" y="40" width="108" height="38" rx="5" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <rect x="132" y="40" width="56" height="38" rx="5" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <rect x="252" y="40" width="56" height="38" rx="5" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <rect x="20" y="130" width="108" height="38" rx="5" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <rect x="132" y="130" width="56" height="38" rx="5" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <rect x="252" y="130" width="56" height="38" rx="5" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <rect x="20" y="220" width="108" height="38" rx="5" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <rect x="132" y="220" width="56" height="38" rx="5" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <rect x="252" y="220" width="56" height="38" rx="5" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <!-- gold highlighted boxes -->
+          <rect x="132" y="40" width="56" height="38" rx="5" fill="rgba(201,168,76,0.15)" stroke="#C9A84C" stroke-width="2"/>
+          <rect x="132" y="220" width="56" height="38" rx="5" fill="rgba(201,168,76,0.15)" stroke="#C9A84C" stroke-width="2"/>
+          <!-- diamond -->
+          <polygon points="160,112 176,130 160,148 144,130" fill="#fff" stroke="#8a9bb0" stroke-width="1.5"/>
+          <polygon points="160,202 176,220 160,238 144,220" fill="rgba(201,168,76,0.15)" stroke="#C9A84C" stroke-width="2"/>
+          <!-- labels -->
+          <text x="74" y="63" font-family="Inter,sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Assess</text>
+          <text x="160" y="63" font-family="Inter,sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Review</text>
+          <text x="280" y="63" font-family="Inter,sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Plan</text>
+          <text x="74" y="153" font-family="Inter,sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Design</text>
+          <text x="160" y="148" font-family="Inter,sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Decision</text>
+          <text x="280" y="153" font-family="Inter,sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Approve</text>
+          <text x="74" y="243" font-family="Inter,sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Implement</text>
+          <text x="160" y="243" font-family="Inter,sans-serif" font-size="9" fill="#C9A84C" font-weight="600" text-anchor="middle">Deploy</text>
+          <text x="280" y="243" font-family="Inter,sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Review</text>
+          <!-- arrowhead marker -->
+          <defs>
+            <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L6,3 z" fill="#8a9bb0"/>
+            </marker>
+          </defs>
         </svg>
       </div>
       <div class="about-text reveal">
