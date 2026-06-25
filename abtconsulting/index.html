@@ -402,6 +402,9 @@
     }
     .why-card h3 { color: var(--white); font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
     .why-card p { color: rgba(255,255,255,0.55); font-size: 0.88rem; }
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+    .why-list li { color: rgba(255,255,255,0.6); font-size: 0.88rem; display: flex; align-items: flex-start; gap: 10px; }
+    .why-list li::before { content: ''; flex-shrink: 0; width: 3px; min-height: 1.4em; background: var(--gold); border-radius: 2px; margin-top: 2px; }
 
     /* ── CONTACT ── */
     #contact { background: var(--light-grey); }
@@ -577,35 +580,6 @@
   <div class="hero-scroll">Scroll</div>
 </section>
 
-<!-- BEFORE & AFTER -->
-<section id="pain">
-  <div class="ba-header reveal">
-    <p class="section-label">Before &amp; After</p>
-  </div>
-  <div class="ba-grid">
-    <div class="ba-col ba-before reveal">
-      <h3 class="ba-col-heading">Before</h3>
-      <ul class="ba-list">
-        <li>Owner dependent</li>
-        <li>Constant firefighting</li>
-        <li>Inconsistent delivery</li>
-        <li>Knowledge lives in people's heads</li>
-        <li>Unclear responsibilities</li>
-      </ul>
-    </div>
-    <div class="ba-col ba-after reveal">
-      <h3 class="ba-col-heading">After</h3>
-      <ul class="ba-list">
-        <li>Team enabled</li>
-        <li>Predictable operations</li>
-        <li>Consistent delivery</li>
-        <li>Documented processes</li>
-        <li>Clear accountability</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <!-- ABOUT -->
 <section id="about">
   <div class="container">
@@ -721,10 +695,11 @@
     <p class="section-label reveal">Why ABT Consulting</p>
     <h2 class="section-title reveal">The ABT Advantage</h2>
     <p class="section-sub reveal" style="color:rgba(255,255,255,0.6);max-width:520px">Practical expertise. Proven operational experience. Solutions that work in the real world.</p>
-    <div class="ba-grid">
-      <div class="ba-col ba-before reveal">
-        <h3 class="ba-col-heading">Before</h3>
-        <ul class="ba-list">
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-number">01</div>
+        <h3>Before</h3>
+        <ul class="why-list">
           <li>Owner dependent</li>
           <li>Constant firefighting</li>
           <li>Inconsistent delivery</li>
@@ -732,9 +707,10 @@
           <li>Unclear responsibilities</li>
         </ul>
       </div>
-      <div class="ba-col ba-after reveal">
-        <h3 class="ba-col-heading">After</h3>
-        <ul class="ba-list">
+      <div class="why-card reveal">
+        <div class="why-number">02</div>
+        <h3>After</h3>
+        <ul class="why-list">
           <li>Team enabled</li>
           <li>Predictable operations</li>
           <li>Consistent delivery</li>
