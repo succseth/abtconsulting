@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -717,51 +718,11 @@
     <p class="section-sub reveal">Ready to take your business to the next level? Reach out and we'd love to hear about your goals.</p>
     <div class="reveal">
       <button class="form-toggle-btn" id="formToggle" aria-expanded="false" aria-controls="formCollapse">
-        Send Us a Message
+        Book a Discovery Call
         <svg class="toggle-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </button>
       <div class="form-collapse" id="formCollapse">
-        <div class="contact-form">
-          <form id="contactForm" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">First Name *</label>
-                <input type="text" id="fname" name="fname" placeholder="Jane" required />
-              </div>
-              <div class="form-group">
-                <label for="lname">Last Name *</label>
-                <input type="text" id="lname" name="lname" placeholder="Smith" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="jane@company.co.za" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="0XX XXX XXXX" />
-            </div>
-            <div class="form-group">
-              <label for="service">Service of Interest</label>
-              <select id="service" name="service">
-                <option value="">Select a service</option>
-                <option>Operational Process Design</option>
-                <option>Documentation &amp; SOP Development</option>
-                <option>Document Automation &amp; Template Systems</option>
-                <option>Operational AI &amp; Automation Readiness</option>
-                <option>General Enquiry</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" placeholder="Tell us about your business and how we can help..." required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Send Message</button>
-            <div class="form-success" id="formSuccess">
-              Thank you! We'll be in touch within one business day.
-            </div>
-          </form>
-        </div>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/abtconsulting?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
       </div>
 
       <h3 style="margin-top: 48px;">Contact Information</h3>
@@ -933,18 +894,6 @@
     formToggle.setAttribute('aria-expanded', isOpen);
   });
 
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('.btn-submit');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    setTimeout(() => {
-      document.getElementById('formSuccess').style.display = 'block';
-      this.reset();
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-    }, 1200);
-  });
 </script>
 </body>
 </html>
