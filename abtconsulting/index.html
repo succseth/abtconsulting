@@ -327,15 +327,7 @@
       overflow: hidden;
       position: relative;
     }
-    .about-img svg { opacity: 0.15; width: 60%; }
-    .about-img::after {
-      content: 'ABTConsulting';
-      position: absolute;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--gold);
-      letter-spacing: 1px;
-    }
+    .about-img svg { width: 90%; height: 90%; }
     .about-text p { color: var(--body-dark); margin-bottom: 16px; }
     .about-stats {
       display: flex;
@@ -619,13 +611,54 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-img">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="white">
-          <rect x="10" y="60" width="20" height="30"/><rect x="40" y="40" width="20" height="50"/><rect x="70" y="20" width="20" height="70"/>
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <!-- connector lines -->
+          <line x1="80" y1="60" x2="180" y2="60" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="220" y1="60" x2="320" y2="60" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="80" y1="150" x2="180" y2="150" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="220" y1="150" x2="320" y2="150" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="80" y1="240" x2="180" y2="240" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="220" y1="240" x2="320" y2="240" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <!-- vertical connectors -->
+          <line x1="200" y1="80" x2="200" y2="130" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+          <line x1="200" y1="170" x2="200" y2="220" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+          <line x1="50" y1="80" x2="50" y2="130" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+          <line x1="50" y1="170" x2="50" y2="220" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+          <line x1="350" y1="80" x2="350" y2="130" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+          <line x1="350" y1="170" x2="350" y2="220" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+          <!-- process nodes - middle column (prominent) -->
+          <rect x="172" y="40" width="56" height="40" rx="6" stroke="rgba(201,168,76,0.85)" stroke-width="1.8" fill="rgba(201,168,76,0.1)"/>
+          <rect x="172" y="130" width="56" height="40" rx="6" stroke="rgba(201,168,76,0.85)" stroke-width="1.8" fill="rgba(201,168,76,0.1)"/>
+          <rect x="172" y="220" width="56" height="40" rx="6" stroke="rgba(201,168,76,0.85)" stroke-width="1.8" fill="rgba(201,168,76,0.1)"/>
+          <!-- process nodes - left column -->
+          <rect x="22" y="40" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
+          <rect x="22" y="130" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
+          <rect x="22" y="220" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
+          <!-- process nodes - right column -->
+          <rect x="322" y="40" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
+          <rect x="322" y="130" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
+          <rect x="322" y="220" width="56" height="40" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
+          <!-- diamond decision nodes -->
+          <polygon points="200,105 212,118 200,131 188,118" stroke="rgba(201,168,76,0.6)" stroke-width="1.5" fill="rgba(201,168,76,0.08)"/>
+          <!-- dots on connectors -->
+          <circle cx="130" cy="60" r="3.5" fill="rgba(201,168,76,0.6)"/>
+          <circle cx="270" cy="60" r="3.5" fill="rgba(201,168,76,0.6)"/>
+          <circle cx="130" cy="150" r="3.5" fill="rgba(201,168,76,0.6)"/>
+          <circle cx="270" cy="150" r="3.5" fill="rgba(201,168,76,0.6)"/>
+          <circle cx="130" cy="240" r="3.5" fill="rgba(201,168,76,0.6)"/>
+          <circle cx="270" cy="240" r="3.5" fill="rgba(201,168,76,0.6)"/>
+          <!-- arrow heads -->
+          <polyline points="175,58 180,60 175,62" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
+          <polyline points="175,148 180,150 175,152" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
+          <polyline points="175,238 180,240 175,242" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
+          <polyline points="315,58 320,60 315,62" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
+          <polyline points="315,148 320,150 315,152" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
+          <polyline points="315,238 320,240 315,242" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none"/>
         </svg>
       </div>
       <div class="about-text reveal">
-        <p class="section-label">About Us</p>
-        <h2 class="section-title">Built on Trust.<br />Driven by Results.</h2>
+        <p class="section-label">About</p>
+        <h2 class="section-title">Better Businesses Start Here.</h2>
         <p id="about-body1">ABTConsulting (PTY) Ltd is a Johannesburg-registered, Cape Town-based business management consultancy. We help small and medium enterprises navigate complexity: from cloud adoption and data strategy to marketing, public relations, and compliance.</p>
         <p id="about-body2">Our team combines deep local knowledge with international best practices to deliver solutions that are practical, scalable, and aligned with your goals. We don't do one-size-fits-all. Every engagement is tailored to your unique business context.</p>
         <div class="about-stats">
