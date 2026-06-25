@@ -391,7 +391,7 @@
       background: rgba(255,255,255,0.03);
       transition: background 0.25s, border-color 0.25s;
     }
-    .why-card:hover { background: rgba(201,168,76,0.08); border-color: var(--gold); }
+    .why-card.why-after { background: rgba(201,168,76,0.08); border-color: var(--gold); }
     .why-number {
       font-family: 'Playfair Display', serif;
       font-size: 2.4rem;
@@ -404,7 +404,8 @@
     .why-card p { color: rgba(255,255,255,0.55); font-size: 0.88rem; }
     .why-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
     .why-list li { color: rgba(255,255,255,0.6); font-size: 0.88rem; display: flex; align-items: flex-start; gap: 10px; }
-    .why-list li::before { content: ''; flex-shrink: 0; width: 3px; min-height: 1.4em; background: var(--gold); border-radius: 2px; margin-top: 2px; }
+    .why-card .why-list li::before { content: ''; flex-shrink: 0; width: 3px; min-height: 1.4em; background: rgba(255,255,255,0.35); border-radius: 2px; margin-top: 2px; }
+    .why-card.why-after .why-list li::before { background: var(--gold); }
 
     /* ── CONTACT ── */
     #contact { background: var(--light-grey); }
@@ -697,7 +698,6 @@
     <p class="section-sub reveal" style="color:rgba(255,255,255,0.6);max-width:520px">Practical expertise. Proven operational experience. Solutions that work in the real world.</p>
     <div class="why-grid">
       <div class="why-card reveal">
-        <div class="why-number">01</div>
         <h3>Before</h3>
         <ul class="why-list">
           <li>Owner dependent</li>
@@ -707,8 +707,7 @@
           <li>Unclear responsibilities</li>
         </ul>
       </div>
-      <div class="why-card reveal">
-        <div class="why-number">02</div>
+      <div class="why-card why-after reveal">
         <h3>After</h3>
         <ul class="why-list">
           <li>Team enabled</li>
