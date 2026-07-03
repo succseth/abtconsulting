@@ -2,19 +2,19 @@
   "items": [
     {
       "title": "Operational Process Design",
-      "description": "I identify bottlenecks, inefficiencies, and workflow gaps, then redesign processes to improve consistency, quality, and scalability."
+      "description": "Bottlenecks, inefficiencies, and workflow gaps are identified and addressed to improve consistency, quality, and scalability."
     },
     {
       "title": "Documentation & SOP Development",
-      "description": "I create practical SOPs, process guides, checklists, and operational standards that help teams work consistently and reduce risk."
+      "description": "Practical SOPs, process guides, checklists, and operational standards provide teams with clear, consistent ways of working while reducing operational risk."
     },
     {
       "title": "Document Automation & Template Systems",
-      "description": "I design logic-based templates and automation solutions that reduce manual effort, improve accuracy, and standardise outputs."
+      "description": "Logic-based templates and document automation solutions reduce manual effort, improve accuracy, and standardise outputs."
     },
     {
       "title": "Operational AI & Automation Readiness",
-      "description": "I assess where AI and automation can create genuine business value and prepare your processes for successful implementation."
+      "description": "AI and automation opportunities are identified to improve efficiency, streamline operations, and support successful implementation."
     }
   ]
 }
